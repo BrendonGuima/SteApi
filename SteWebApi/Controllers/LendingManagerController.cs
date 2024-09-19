@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using SteWebApi.Model;
+using System.Security.Claims;
 
 
 namespace SteWebApi.Controllers;
@@ -31,13 +32,15 @@ public class LendingManagerController : ControllerBase
      );
 
      if (item == null) return NotFound();
+        var userId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
 
-     var itemLending = new LendingManager()
-     {
-      Id   = item.Id,
+        var itemLending = new LendingManager()
+        {
+      Id = item.Id,
+      UserId = userId,
       CategoryId = item.CategoryId,
-      Name = item.Name,
-      Code = item.Code,
+      ItemName = item.Name,
+      ItemCode = item.Code,
       DateLend = DateTime.Now,
       DateReturn = null,
       StudentName = request.StudentName,
@@ -49,9 +52,10 @@ public class LendingManagerController : ControllerBase
      var historyLending = new ItemTransactionHistory()
      {
          ItemId = item.Id,
+         UserId = userId,
          CategoryId = item.CategoryId,
-         Name = item.Name,
-         Code = item.Code,
+         ItemName = item.Name,
+         ItemCode = item.Code,
          DateLend = DateTime.Now,
          DateReturn = null,
          StudentName = itemLending.StudentName,

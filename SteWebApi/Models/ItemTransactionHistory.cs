@@ -8,21 +8,23 @@ public class ItemTransactionHistory
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public string Id { get; set; }
-    [Required]
-    public string ItemId { get; set; }
-    [Required]
-    public string Name { get; set; }
-    [Required]
-    public string Code { get; set; }
-    [Required] 
-    public string CategoryId { get; set; }
-    [Required]
-    public DateTime DateLend { get; set; }
-    [Required]
+    public string? Id { get; set; }
+
+    public string? UserId { get; set; }
+   
+    public string? ItemId { get; set; }
+   
+    public string? ItemName { get; set; }
+    
+    public string? ItemCode { get; set; }
+   
+    public string? CategoryId { get; set; }
+   
+    public DateTime? DateLend { get; set; }
+    
     public DateTime? DateReturn { get; set; }
-    [Required]
-    public string StudentName { get; set; }
-    [Required]
-    public string StudentId { get; set; }
+    
+    public string? StudentName { get; set; }
+   
+    public string? StudentId { get; set; }
 }
