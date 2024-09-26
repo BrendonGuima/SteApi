@@ -5,7 +5,7 @@ using SteWebApi.Model;
 
 namespace SteWebApi.Controllers;
 
-[Authorize]
+//[Authorize]
 [Route("api/[controller]")]
 [ApiController]
 

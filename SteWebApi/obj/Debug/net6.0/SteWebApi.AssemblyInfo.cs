@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SteWebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd7abe52263b6a9e32cce0438f9b1f25972dcb69")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13f047774524dbe54520879f52be29716cfc117c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SteWebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SteWebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -5,7 +5,7 @@ using MongoDB.Driver;
 
 namespace SteWebApi.Controllers;
 
-[Authorize]
+//[Authorize]
 [Route("api/[controller]")]
 [ApiController]
 
