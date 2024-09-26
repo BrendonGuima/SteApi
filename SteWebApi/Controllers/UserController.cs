@@ -1,4 +1,5 @@
 using System.IdentityModel.Tokens.Jwt;
+using Amazon.Runtime;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
@@ -28,7 +29,7 @@ namespace SteWebApi.Controllers;
             JwtTokenGeneration jwtTokenGenerate = new JwtTokenGeneration();
             var jwt = jwtTokenGenerate.GenerateJwt(userDb);
 
-            return Ok(jwt);
+            return Ok(new { access = jwt });
         }
         
         [AllowAnonymous]

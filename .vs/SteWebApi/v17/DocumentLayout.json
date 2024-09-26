@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\steapi\\stewebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\steapi\\stewebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "SteWebApi\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "SteWebApi\\Controllers\\UserController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAowCAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T01:20:07.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Program.cs",
+              "RelativeDocumentMoniker": "SteWebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Program.cs",
+              "RelativeToolTip": "SteWebApi\\Program.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T21:58:34.53Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
