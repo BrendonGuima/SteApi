@@ -12,11 +12,6 @@ public class Item
     
     public string? Code { get; set; }
     
-    public bool? IsLend { get; set; }
-
-    public string? LendeeName { get; set; }
-
-    public string? LendeeId { get; set; }
     
     [BsonRepresentation(BsonType.ObjectId)]
     public string? CategoryId { get; set; }

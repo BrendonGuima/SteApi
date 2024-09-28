@@ -19,7 +19,9 @@ public class ItemTransactionHistory
     public string? ItemCode { get; set; }
    
     public string? CategoryId { get; set; }
-   
+
+    public bool? IsLend { get; set; }
+
     public DateTime? DateLend { get; set; }
     
     public DateTime? DateReturn { get; set; }

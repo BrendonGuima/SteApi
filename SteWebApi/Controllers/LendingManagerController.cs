@@ -23,15 +23,11 @@ public class LendingManagerController : ControllerBase
     [HttpPost("Lend/{id}")]
     public async Task<ActionResult> LendForId(string id, [FromBody] LendingManager request)
     {
-     var item = await _context.Items.FindOneAndUpdateAsync(
-      Builders<Item>.Filter.Eq(i => i.Id, id),
-      Builders<Item>.Update
-          .Set(i => i.IsLend, true)
-          .Set(i => i.LendeeName, request.StudentName)
-          .Set(i => i.LendeeId, request.StudentId)
-     );
+        var item = await _context.Items
+            .Find(Builders<Item>.Filter.Eq(i => i.Id, id))
+            .FirstOrDefaultAsync();
 
-     if (item == null) return NotFound();
+        if (item == null) return NotFound();
         var userId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
 
         var itemLending = new LendingManager()
@@ -58,6 +54,7 @@ public class LendingManagerController : ControllerBase
          ItemCode = item.Code,
          DateLend = DateTime.Now,
          DateReturn = null,
+         IsLend = true,
          StudentName = itemLending.StudentName,
          StudentId = itemLending.StudentId
      };
@@ -70,13 +67,11 @@ public class LendingManagerController : ControllerBase
     [HttpPost("Return/{id}")]
     public async Task<ActionResult> ReturnItem(string id)
     {
-        var itemLending = await _context.Items.FindOneAndUpdateAsync(
-            Builders<Item>.Filter.Eq(i => i.Id, id),
-            Builders<Item>.Update.Set(i => i.IsLend, false)
-                      .Set(i => i.LendeeName, null)
-                      .Set(i => i.LendeeId, null)
-        );
-        if (itemLending == null) NotFound();
+        var item = await _context.Items
+       .Find(Builders<Item>.Filter.Eq(i => i.Id, id))
+       .FirstOrDefaultAsync();
+
+        if (item == null) NotFound();
         //History
         var filter = Builders<ItemTransactionHistory>.Filter.Eq(h => h.ItemId, id);
         var sort = Builders<ItemTransactionHistory> .Sort.Descending(h => h.DateLend);
@@ -87,7 +82,8 @@ public class LendingManagerController : ControllerBase
             return NotFound(); // Nenhum hist�rico encontrado para atualizar
         }
 
-        var update = Builders<ItemTransactionHistory>.Update.Set(h => h.DateReturn, DateTime.Now);
+        var update = Builders<ItemTransactionHistory>.Update.Set(h => h.DateReturn, DateTime.Now)
+            .Set(h => h.IsLend, false);
 
 
         var updateResult = await _context.HistoryLendItems.UpdateOneAsync(
@@ -109,5 +105,12 @@ public class LendingManagerController : ControllerBase
     {
         var items = await _context.HistoryLendItems.Find(_ => true).ToListAsync();
         return Ok(items);
+    }
+
+    [HttpGet("GetAll")]
+    public async Task<ActionResult> GetAll()
+    {
+        var model = await _context.ItemLending.Find(_ => true).ToListAsync();
+        return Ok(model);
     }
 }
