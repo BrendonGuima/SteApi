@@ -11,7 +11,9 @@ public class Item
     public string? Name { get; set; }
     
     public string? Code { get; set; }
+
     
+    public bool? IsLend { get; set; }
     
     [BsonRepresentation(BsonType.ObjectId)]
     public string? CategoryId { get; set; }

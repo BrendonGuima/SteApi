@@ -3,6 +3,7 @@ using Amazon.Runtime;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using SteWebApi.DtoModels;
 using SteWebApi.Model;
 using SteWebApi.Services;
 
@@ -34,14 +35,21 @@ namespace SteWebApi.Controllers;
         
         [AllowAnonymous]
         [HttpPost("Create")]
-        public async Task<ActionResult> Create(User user)
+        public async Task<ActionResult> Create([FromBody]UserDto model)
         {
+
+            var user = new User
+            {
+                Name = model.Name,
+                Password = model.Password
+            };
+            
             await _MongoDbContext.Users.InsertOneAsync(user);
             return Ok(user);
         }
         
         [HttpPut("Edit/{id}")]
-        public async Task<ActionResult> UpdateItemName(string id, [FromBody] User newUser)
+        public async Task<ActionResult> UpdateItemName(string id, [FromBody] UserDto newUser)
         {
             var user = await _MongoDbContext.Users.Find(i => i.Id == id).FirstOrDefaultAsync();
             if (user == null) return NotFound();

@@ -9,7 +9,7 @@ public class MongoDbContext
     public IMongoCollection<User> Users => _database.GetCollection<User>("User");
     public IMongoCollection<Category> Category => _database.GetCollection<Category>("Category");
     public IMongoCollection<Item> Items => _database.GetCollection<Item>("Items");
-    public IMongoCollection<LendingManager> ItemLending => _database.GetCollection<LendingManager>("ItemLending");
+    public IMongoCollection<LendingManagerDto> ItemLending => _database.GetCollection<LendingManagerDto>("ItemLending");
     public IMongoCollection<ItemTransactionHistory> HistoryLendItems => _database.GetCollection<ItemTransactionHistory>("HistoryLendItems");
     
     

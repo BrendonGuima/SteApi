@@ -2,6 +2,7 @@ using SteWebApi.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using SteWebApi.DtoModels;
 
 namespace SteWebApi.Controllers;
 
@@ -19,8 +20,14 @@ public class ItemController : ControllerBase
     }
     
     [HttpPost("Create")]
-    public async Task<IActionResult> CreateItemAndLinkToCategory(Item item)
+    public async Task<IActionResult> CreateItemAndLinkToCategory([FromBody]ItemDto model)
     {
+        var item = new Item
+        {
+            Name = model.Name,
+            Code = model.Code,
+            CategoryId = model.CategoryId
+        };
         await _MongoDbContext.Items.InsertOneAsync(item);
 
         var categoryFilter = Builders<Category>.Filter.Eq(c => c.Id, item.CategoryId);
@@ -34,7 +41,7 @@ public class ItemController : ControllerBase
     }
     
     [HttpPut("Edit/{id}")]
-    public async Task<ActionResult> UpdateItemName(string id, [FromBody] Item newItem)
+    public async Task<ActionResult> UpdateItemName(string id, [FromBody] ItemDto newItem)
     {
         var item = await _MongoDbContext.Items.Find(i => i.Id == id).FirstOrDefaultAsync();
         if (item == null) return NotFound();

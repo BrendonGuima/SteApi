@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using SteWebApi.DtoModels;
 using SteWebApi.Model;
 
 namespace SteWebApi.Controllers;
@@ -19,14 +20,18 @@ public class CategoryController : ControllerBase
     }
 
     [HttpPost("Create")]
-    public async Task<ActionResult> Create(Category model)
+    public async Task<ActionResult> Create([FromBody] CategoryCreateDto model)
     {
-        await _MongoDbContext.Category.InsertOneAsync(model);
+        var category = new Category
+        {
+            Name = model.Name
+        };
+        await _MongoDbContext.Category.InsertOneAsync(category);
         return Ok(model);
     }
 
     [HttpPut("Edit/{id}")]
-    public async Task<ActionResult> UpdateCategoryName(string id, [FromBody] Category newCategory)
+    public async Task<ActionResult> UpdateCategoryName(string id, [FromBody] CategoryCreateDto newCategory)
     {
         var category = await _MongoDbContext.Category.Find(c => c.Id == id).FirstOrDefaultAsync();
         if (category == null) return NotFound();

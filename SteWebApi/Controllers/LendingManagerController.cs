@@ -21,28 +21,17 @@ public class LendingManagerController : ControllerBase
     }
 
     [HttpPost("Lend/{id}")]
-    public async Task<ActionResult> LendForId(string id, [FromBody] LendingManager request)
+    public async Task<ActionResult> LendForId(string id, [FromBody] LendingManagerDto request)
     {
         var item = await _context.Items
-            .Find(Builders<Item>.Filter.Eq(i => i.Id, id))
-            .FirstOrDefaultAsync();
+            .FindOneAndUpdateAsync(
+                Builders<Item>.Filter.Eq(i => i.Id, id),
+                Builders<Item>.Update.Set(i => i.IsLend, true)
+            );
 
         if (item == null) return NotFound();
-        var userId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+        var userId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
 
-        var itemLending = new LendingManager()
-        {
-      Id = item.Id,
-      UserId = userId,
-      CategoryId = item.CategoryId,
-      ItemName = item.Name,
-      ItemCode = item.Code,
-      DateLend = DateTime.Now,
-      DateReturn = null,
-      StudentName = request.StudentName,
-      StudentId = request.StudentId
-     };
-     await _context.ItemLending.InsertOneAsync(itemLending);
      
      //History
      var historyLending = new ItemTransactionHistory()
@@ -55,8 +44,8 @@ public class LendingManagerController : ControllerBase
          DateLend = DateTime.Now,
          DateReturn = null,
          IsLend = true,
-         StudentName = itemLending.StudentName,
-         StudentId = itemLending.StudentId
+         StudentName = request.StudentName,
+         StudentId = request.StudentId
      };
      
      await _context.HistoryLendItems.InsertOneAsync(historyLending);
@@ -95,7 +84,6 @@ public class LendingManagerController : ControllerBase
         {
             return NotFound(); 
         }
-        await _context.ItemLending.FindOneAndDeleteAsync(x => x.Id == id);
         return NoContent();
     }
 
@@ -105,12 +93,5 @@ public class LendingManagerController : ControllerBase
     {
         var items = await _context.HistoryLendItems.Find(_ => true).ToListAsync();
         return Ok(items);
-    }
-
-    [HttpGet("GetAll")]
-    public async Task<ActionResult> GetAll()
-    {
-        var model = await _context.ItemLending.Find(_ => true).ToListAsync();
-        return Ok(model);
     }
 }
