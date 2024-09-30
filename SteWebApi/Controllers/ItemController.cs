@@ -6,7 +6,7 @@ using SteWebApi.DtoModels;
 
 namespace SteWebApi.Controllers;
 
-//[Authorize]
+[Authorize]
 [Route("api/[controller]")]
 [ApiController]
 

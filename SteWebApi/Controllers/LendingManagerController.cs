@@ -8,7 +8,7 @@ using System.Security.Claims;
 
 namespace SteWebApi.Controllers;
 
-//[Authorize]
+[Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class LendingManagerController : ControllerBase

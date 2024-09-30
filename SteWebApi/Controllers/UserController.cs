@@ -33,7 +33,7 @@ namespace SteWebApi.Controllers;
             return Ok(new { access = jwt });
         }
         
-        [AllowAnonymous]
+        [Authorize]
         [HttpPost("Create")]
         public async Task<ActionResult> Create([FromBody]UserDto model)
         {
@@ -48,6 +48,7 @@ namespace SteWebApi.Controllers;
             return Ok(user);
         }
         
+        [Authorize]
         [HttpPut("Edit/{id}")]
         public async Task<ActionResult> UpdateItemName(string id, [FromBody] UserDto newUser)
         {
@@ -68,6 +69,7 @@ namespace SteWebApi.Controllers;
             return NoContent();
         }
         
+        [Authorize]
         [HttpDelete("Delete/{id}")]
         public async Task<ActionResult> Delete(string id)
         {
@@ -77,6 +79,7 @@ namespace SteWebApi.Controllers;
             return NoContent();
         }
 
+        [AllowAnonymous]
         [HttpGet("GetAllUsers")]
         public async Task<ActionResult> GetAll()
         {
