@@ -26,7 +26,8 @@ public class ItemController : ControllerBase
         {
             Name = model.Name,
             Code = model.Code,
-            CategoryId = model.CategoryId
+            CategoryId = model.CategoryId,
+            IsLend = false
         };
         await _MongoDbContext.Items.InsertOneAsync(item);
 

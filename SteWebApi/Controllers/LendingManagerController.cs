@@ -57,8 +57,9 @@ public class LendingManagerController : ControllerBase
     public async Task<ActionResult> ReturnItem(string id)
     {
         var item = await _context.Items
-       .Find(Builders<Item>.Filter.Eq(i => i.Id, id))
-       .FirstOrDefaultAsync();
+            .FindOneAndUpdateAsync(
+                Builders<Item>.Filter.Eq(i => i.Id, id),
+                Builders<Item>.Update.Set(i => i.IsLend, false));
 
         if (item == null) NotFound();
         //History
@@ -70,7 +71,7 @@ public class LendingManagerController : ControllerBase
         {
             return NotFound(); // Nenhum hist�rico encontrado para atualizar
         }
-
+        
         var update = Builders<ItemTransactionHistory>.Update.Set(h => h.DateReturn, DateTime.Now)
             .Set(h => h.IsLend, false);
 
