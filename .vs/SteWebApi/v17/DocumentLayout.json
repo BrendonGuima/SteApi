@@ -3,36 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\steapi\\stewebapi\\controllers\\lendingmanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\controllers\\lendingmanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\steapi\\stewebapi\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\steapi\\stewebapi\\models\\itemtransactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\models\\itemtransactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\steapi\\stewebapi\\models\\lendingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\models\\lendingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\steapi\\stewebapi\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\steapi\\stewebapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\steapi\\stewebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\steapi\\stewebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\steapi\\stewebapi\\dtomodels\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\dtomodels\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,108 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ItemController.cs",
-              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\ItemController.cs",
-              "RelativeDocumentMoniker": "SteWebApi\\Controllers\\ItemController.cs",
-              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\ItemController.cs",
-              "RelativeToolTip": "SteWebApi\\Controllers\\ItemController.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAIwEoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T01:15:53.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Models\\Item.cs",
-              "RelativeDocumentMoniker": "SteWebApi\\Models\\Item.cs",
-              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Models\\Item.cs",
-              "RelativeToolTip": "SteWebApi\\Models\\Item.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "ItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\DtoModels\\ItemDto.cs",
+              "RelativeDocumentMoniker": "SteWebApi\\DtoModels\\ItemDto.cs",
+              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\DtoModels\\ItemDto.cs",
+              "RelativeToolTip": "SteWebApi\\DtoModels\\ItemDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T01:15:49.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LendingManager.cs",
-              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Models\\LendingManager.cs",
-              "RelativeDocumentMoniker": "SteWebApi\\Models\\LendingManager.cs",
-              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Models\\LendingManager.cs",
-              "RelativeToolTip": "SteWebApi\\Models\\LendingManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T01:04:24.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ItemTransactionHistory.cs",
-              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Models\\ItemTransactionHistory.cs",
-              "RelativeDocumentMoniker": "SteWebApi\\Models\\ItemTransactionHistory.cs",
-              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Models\\ItemTransactionHistory.cs",
-              "RelativeToolTip": "SteWebApi\\Models\\ItemTransactionHistory.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T00:47:43.344Z",
+              "WhenOpened": "2024-10-03T18:20:47.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LendingManagerController.cs",
-              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\LendingManagerController.cs",
-              "RelativeDocumentMoniker": "SteWebApi\\Controllers\\LendingManagerController.cs",
-              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\LendingManagerController.cs",
-              "RelativeToolTip": "SteWebApi\\Controllers\\LendingManagerController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwD8AAAAYAAAA",
+              "Title": "ItemController.cs",
+              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\ItemController.cs",
+              "RelativeDocumentMoniker": "SteWebApi\\Controllers\\ItemController.cs",
+              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\ItemController.cs",
+              "RelativeToolTip": "SteWebApi\\Controllers\\ItemController.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAAAFYAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T20:21:48.666Z",
+              "WhenOpened": "2024-09-28T01:15:53.098Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "SteWebApi\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "SteWebApi\\Controllers\\CategoryController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T20:17:34.134Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "SteWebApi\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\UserController.cs",
-              "RelativeToolTip": "SteWebApi\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T01:20:07.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Program.cs",
-              "RelativeDocumentMoniker": "SteWebApi\\Program.cs",
-              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Program.cs",
-              "RelativeToolTip": "SteWebApi\\Program.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T21:58:34.53Z"
             }
           ]
         }

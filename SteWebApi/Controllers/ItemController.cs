@@ -27,7 +27,7 @@ public class ItemController : ControllerBase
             Name = model.Name,
             Code = model.Code,
             CategoryId = model.CategoryId,
-            IsLend = false
+            IsLend = false,
         };
         await _MongoDbContext.Items.InsertOneAsync(item);
 
@@ -61,17 +61,33 @@ public class ItemController : ControllerBase
         var item = await _MongoDbContext.Items.FindOneAndDeleteAsync(x => x.Id == id);
         if (item == null) return NotFound();
 
+    
+        Console.WriteLine($"Item removido: {item.Id}");
+
+        var category = await _MongoDbContext.Category
+            .Find(c => c.Items.Any(i => i.Id == id))
+            .FirstOrDefaultAsync();
+
+    
+        if (category == null) return NotFound();
+
         var updateDefinition = Builders<Category>.Update.PullFilter(c => c.Items, i => i.Id == id);
-        var category = await _MongoDbContext.Category.FindOneAndUpdateAsync(
-            Builders<Category>.Filter.Where(c => c.Items.Any(i => i.Id == id)),
+        var updatedCategory = await _MongoDbContext.Category.FindOneAndUpdateAsync(
+            Builders<Category>.Filter.Where(c => c.Id == category.Id),
             updateDefinition,
             new FindOneAndUpdateOptions<Category> { ReturnDocument = ReturnDocument.After });
 
-        if (category == null) return NotFound();
+  
+        if (updatedCategory == null || !updatedCategory.Items.Any(i => i.Id == id))
+        {
+            Console.WriteLine("Falha na remoção do item da categoria.");
+            return NotFound();
+        }
 
-        return NoContent();
+        return Ok(item);
     }
-    
+
+
     [HttpGet("Get/{id}")]
     public async Task<ActionResult> GetById(string id)
     {
