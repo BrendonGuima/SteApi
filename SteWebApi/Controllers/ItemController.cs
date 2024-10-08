@@ -61,9 +61,6 @@ public class ItemController : ControllerBase
         var item = await _MongoDbContext.Items.FindOneAndDeleteAsync(x => x.Id == id);
         if (item == null) return NotFound();
 
-    
-        Console.WriteLine($"Item removido: {item.Id}");
-
         var category = await _MongoDbContext.Category
             .Find(c => c.Items.Any(i => i.Id == id))
             .FirstOrDefaultAsync();
@@ -76,15 +73,9 @@ public class ItemController : ControllerBase
             Builders<Category>.Filter.Where(c => c.Id == category.Id),
             updateDefinition,
             new FindOneAndUpdateOptions<Category> { ReturnDocument = ReturnDocument.After });
+        
 
-  
-        if (updatedCategory == null || !updatedCategory.Items.Any(i => i.Id == id))
-        {
-            Console.WriteLine("Falha na remoção do item da categoria.");
-            return NotFound();
-        }
-
-        return Ok(item);
+        return Ok();
     }
 
 
