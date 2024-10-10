@@ -9,13 +9,13 @@ public class ItemDto
     [MinLength(5, ErrorMessage = "O nome do item deve ter pelo menos 5 caracteres.")]
     [RegularExpression(@"^[a-zA-Z0-9 ]+$", ErrorMessage = "O nome do item não pode conter caracteres especiais.")]
     [DefaultValue("Joystick xbox 360")]
-    public string Name { get; set; }
+    public string? Name { get; set; }
     [Required]
     [RegularExpression(@"^\d+$", ErrorMessage = "O code do item deve conter apenas números.")]
     [DefaultValue("01")]
-    public string Code { get; set; }
+    public string? Code { get; set; }
     
     [Required]
     [DefaultValue("Id da categoria")]
-    public string CategoryId { get; set; }
+    public string? CategoryId { get; set; }
 }

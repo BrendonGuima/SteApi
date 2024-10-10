@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\SteWebApi.csproj": {}
+    "C:\\Users\\brendon.antunes\\Desktop\\SteWebApi\\SteWebApi\\SteWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\SteWebApi.csproj": {
+    "C:\\Users\\brendon.antunes\\Desktop\\SteWebApi\\SteWebApi\\SteWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\SteWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\brendon.antunes\\Desktop\\SteWebApi\\SteWebApi\\SteWebApi.csproj",
         "projectName": "SteWebApi",
-        "projectPath": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\SteWebApi.csproj",
+        "projectPath": "C:\\Users\\brendon.antunes\\Desktop\\SteWebApi\\SteWebApi\\SteWebApi.csproj",
         "packagesPath": "C:\\Users\\brendon.antunes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\obj\\",
+        "outputPath": "C:\\Users\\brendon.antunes\\Desktop\\SteWebApi\\SteWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\brendon.antunes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\brendon.antunes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,24 +73,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.35, 6.0.35]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.35, 6.0.35]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.35, 6.0.35]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.35, 6.0.35]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -97,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

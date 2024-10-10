@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\",
+  "WorkspaceRootPath": "C:\\Users\\brendon.antunes\\Desktop\\SteWebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\steapi\\stewebapi\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\stewebapi\\stewebapi\\dtomodels\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\dtomodels\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\steapi\\stewebapi\\dtomodels\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\dtomodels\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|c:\\users\\brendon.antunes\\desktop\\stewebapi\\stewebapi\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA80178-2960-41F4-81C1-A30DAD9A10CC}|SteWebApi\\SteWebApi.csproj|solutionrelative:stewebapi\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\DtoModels\\ItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteWebApi\\SteWebApi\\DtoModels\\ItemDto.cs",
               "RelativeDocumentMoniker": "SteWebApi\\DtoModels\\ItemDto.cs",
-              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\DtoModels\\ItemDto.cs",
+              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteWebApi\\SteWebApi\\DtoModels\\ItemDto.cs",
               "RelativeToolTip": "SteWebApi\\DtoModels\\ItemDto.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T18:20:47.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ItemController.cs",
-              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\ItemController.cs",
+              "DocumentMoniker": "C:\\Users\\brendon.antunes\\Desktop\\SteWebApi\\SteWebApi\\Controllers\\ItemController.cs",
               "RelativeDocumentMoniker": "SteWebApi\\Controllers\\ItemController.cs",
-              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\Controllers\\ItemController.cs",
+              "ToolTip": "C:\\Users\\brendon.antunes\\Desktop\\SteWebApi\\SteWebApi\\Controllers\\ItemController.cs",
               "RelativeToolTip": "SteWebApi\\Controllers\\ItemController.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAAAFYAAAAYAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAiwDMAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-28T01:15:53.098Z",
               "EditorCaption": ""
