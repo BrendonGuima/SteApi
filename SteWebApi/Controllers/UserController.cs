@@ -79,7 +79,7 @@ namespace SteWebApi.Controllers;
             return NoContent();
         }
 
-        [AllowAnonymou]
+        [AllowAnonymous]
         [HttpGet("GetAllUsers")]
         public async Task<ActionResult> GetAll()
         {
