@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SteWebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5dd20b4dec63a25f07bee6ec3f6b89a97bd772a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f5bce673a2bed323cc684b5fd14cd23762c731c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SteWebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SteWebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

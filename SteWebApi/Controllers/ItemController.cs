@@ -22,6 +22,15 @@ public class ItemController : ControllerBase
     [HttpPost("Create")]
     public async Task<IActionResult> CreateItemAndLinkToCategory([FromBody]ItemDto model)
     {
+        var existingItem = await _MongoDbContext.Items
+            .Find(i => i.Code == model.Code && i.CategoryId == model.CategoryId)
+            .FirstOrDefaultAsync();
+        
+        if (existingItem != null)
+        {
+            return BadRequest(new { message = "Já existe um item com esse Code na categoria especificada." });
+        }
+
         var item = new Item
         {
             Name = model.Name,

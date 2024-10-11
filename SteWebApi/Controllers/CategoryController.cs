@@ -22,6 +22,14 @@ public class CategoryController : ControllerBase
     [HttpPost("Create")]
     public async Task<ActionResult> Create([FromBody] CategoryCreateDto model)
     {
+        var existingitem = await _MongoDbContext.Category
+            .Find(x => x.Name == model.Name)
+            .FirstOrDefaultAsync();
+
+        if (existingitem != null)
+        {
+            return BadRequest("Já existe uma categoria com o mesmo nome.");
+        }
         var category = new Category
         {
             Name = model.Name
@@ -44,7 +52,6 @@ public class CategoryController : ControllerBase
     public async Task<ActionResult> Delete(string id)
     {
         await _MongoDbContext.Items.DeleteManyAsync(x => x.CategoryId == id);
-
         
         var category = await _MongoDbContext.Category.FindOneAndDeleteAsync(x => x.Id == id);
         if (category == null) NotFound();
