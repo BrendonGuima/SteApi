@@ -22,11 +22,11 @@ public class ItemController : ControllerBase
     [HttpPost("Create")]
     public async Task<IActionResult> CreateItemAndLinkToCategory([FromBody]ItemDto model)
     {
-        var existingItem = await _MongoDbContext.Items
+        var existingCode = await _MongoDbContext.Items
             .Find(i => i.Code == model.Code && i.CategoryId == model.CategoryId)
             .FirstOrDefaultAsync();
         
-        if (existingItem != null)
+        if (existingCode != null)
         {
             return BadRequest(new { message = "Já existe um item com esse Code na categoria especificada." });
         }
@@ -53,6 +53,14 @@ public class ItemController : ControllerBase
     [HttpPut("Edit/{id}")]
     public async Task<ActionResult> UpdateItemName(string id, [FromBody] ItemDto newItem)
     {
+        var existingCode = await _MongoDbContext.Items
+            .Find(i => i.Code == newItem.Code && i.CategoryId == newItem.CategoryId)
+            .FirstOrDefaultAsync();
+        
+        if (existingCode != null)
+        {
+            return BadRequest(new { message = "Já existe um item com esse Code na categoria especificada." });
+        }
         var item = await _MongoDbContext.Items.Find(i => i.Id == id).FirstOrDefaultAsync();
         if (item == null) return NotFound();
 

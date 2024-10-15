@@ -69,7 +69,7 @@ public class LendingManagerController : ControllerBase
 
         if (latestHistory == null)
         {
-            return NotFound(); // Nenhum hist�rico encontrado para atualizar
+            return NotFound(); 
         }
         
         var update = Builders<ItemTransactionHistory>.Update.Set(h => h.DateReturn, DateTime.Now)

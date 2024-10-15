@@ -2,6 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using Amazon.Runtime;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using SteWebApi.DtoModels;
 using SteWebApi.Model;
@@ -24,7 +25,8 @@ namespace SteWebApi.Controllers;
         [HttpPost("authenticate")]
         public async Task<ActionResult> Authenticate(AuthenticateDto model)
         {
-            var filter = Builders<User>.Filter.Eq(u => u.Name, model.Name);
+            
+            var filter = Builders<User>.Filter.Regex(u => u.Name, new BsonRegularExpression($"^{model.Name}$", "i") );
             var userDb = await _MongoDbContext.Users.Find(filter).FirstOrDefaultAsync();
             if (userDb == null || userDb.Password != model.Password) return Unauthorized();
             JwtTokenGeneration jwtTokenGenerate = new JwtTokenGeneration();
@@ -40,7 +42,7 @@ namespace SteWebApi.Controllers;
 
             var user = new User
             {
-                Name = model.Name,
+                Name = model.Name.ToLower(),
                 Password = model.Password
             };
             

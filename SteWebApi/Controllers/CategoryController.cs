@@ -41,6 +41,14 @@ public class CategoryController : ControllerBase
     [HttpPut("Edit/{id}")]
     public async Task<ActionResult> UpdateCategoryName(string id, [FromBody] CategoryCreateDto newCategory)
     {
+        var existingitem = await _MongoDbContext.Category
+            .Find(x => x.Name == newCategory.Name)
+            .FirstOrDefaultAsync();
+
+        if (existingitem != null)
+        {
+            return BadRequest("Já existe uma categoria com o mesmo nome.");
+        }
         var category = await _MongoDbContext.Category.Find(c => c.Id == id).FirstOrDefaultAsync();
         if (category == null) return NotFound();
         category.Name = newCategory.Name;
