@@ -23,35 +23,42 @@ public class LendingManagerController : ControllerBase
     [HttpPost("Lend/{id}")]
     public async Task<ActionResult> LendForId(string id, [FromBody] LendingManagerDto request)
     {
-        var item = await _context.Items
-            .FindOneAndUpdateAsync(
+        // Verifica se o item existe e se está disponível
+        var item = await _context.Items.FindOneAndUpdateAsync(
+            Builders<Item>.Filter.And(
                 Builders<Item>.Filter.Eq(i => i.Id, id),
-                Builders<Item>.Update.Set(i => i.IsLend, true)
-            );
+                Builders<Item>.Filter.Eq(i => i.IsLend, false) // Verifica se não está emprestado
+            ),
+            Builders<Item>.Update.Set(i => i.IsLend, true)
+        );
 
-        if (item == null) return NotFound();
+        // Se o item for nulo, significa que ele já está emprestado ou não existe
+        if (item == null) 
+            return BadRequest("O item já está emprestado ou não existe.");
+
+        // Obtém o ID do usuário
         var userId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
 
-     
-     //History
-     var historyLending = new ItemTransactionHistory()
-     {
-         ItemId = item.Id,
-         UserId = userId,
-         CategoryId = item.CategoryId,
-         ItemName = item.Name,
-         ItemCode = item.Code,
-         DateLend = DateTime.Now,
-         DateReturn = null,
-         IsLend = true,
-         StudentName = request.StudentName,
-         StudentId = request.StudentId
-     };
-     
-     await _context.HistoryLendItems.InsertOneAsync(historyLending);
+        // Registro do histórico de empréstimo
+        var historyLending = new ItemTransactionHistory()
+        {
+            ItemId = item.Id,
+            UserId = userId,
+            CategoryId = item.CategoryId,
+            ItemName = item.Name,
+            ItemCode = item.Code,
+            DateLend = DateTime.Now,
+            DateReturn = null,
+            IsLend = true,
+            StudentName = request.StudentName,
+            StudentId = request.StudentId
+        };
 
-     return NoContent();
+        await _context.HistoryLendItems.InsertOneAsync(historyLending);
+
+        return NoContent();
     }
+
     
     [HttpPost("Return/{id}")]
     public async Task<ActionResult> ReturnItem(string id)
